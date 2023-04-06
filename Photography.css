@@ -1,0 +1,224 @@
+/*navbar*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+.navbar {
+    font-size: 18px;
+    background: linear-gradient(45deg, rgb(49, 243, 72), rgb(253, 197, 197));
+    padding-bottom: 10px;
+}
+
+.main-nav {
+    list-style-type: none;
+    display: none;
+}
+
+.nav-links, 
+.logo,
+.navbar-toggle {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration:none;
+    color: white
+}
+.main-nav li {
+    text-align: center;
+    margin: 15px auto;
+}
+
+.logo {
+    display: inline-block;
+    font-size: 22px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.navbar-toggle {
+    position: absolute;
+    top:10px;
+    right: 20px;
+    cursor: pointer;
+    color: rgb(225,225,225);
+    font-size: 24px;
+}
+
+#chkToggle {
+    display: none;
+}
+
+#chkToggle:checked + ul.main-nav {
+    display: block; 
+}
+ 
+@media screen and (min-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        height: 70px;
+        align-items: center;
+    }
+    #chkToggle:checked + ul.main-nav {
+        display: flex; 
+    }
+    .main-nav {
+        display: flex;
+        margin-right: 30px;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .main-nav li{
+        margin: 0;
+    }
+    .nav-links {
+        margin-left: 40px;
+    }
+    .logo {
+        margin-top: 0;
+    }
+    .navbar-toggle {
+        display: none;
+    }
+    .logo:hover,
+    .na-links:hover {
+        color: rgb(225,225,225)
+    }
+}
+
+/* Home Page: about paragraph*/
+.intro 
+{
+ display:flex ;
+ text-align: center;
+ font-size: 25px;
+ flex-wrap: wrap;
+ justify-content: center;
+ padding-top: 30px;
+ color: rgb(248, 135, 154);
+
+}
+.paragraph
+{
+    display:flex ;
+    text-align: left;
+    font-size: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+    float: left; 
+    padding: 25px;
+    color: rgb(84, 218, 99)
+}
+
+#main-container
+{
+    padding: 25px 35px;
+}
+
+/*Detailed pages for photos*/
+#detail-photo-paragraph
+{
+    display:flex ;
+    color: rgb(84, 218, 99)
+}
+#detail-photo-main-div
+{
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+/*Available Images: photos*/
+body {
+    margin: 0;
+}
+.photos {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+
+}
+.photos > div >a> img {
+    width: 500px;
+    height: 350px;
+    padding-top: 5px;
+    padding-left: 10px;
+}
+.photos > div> img {
+    width: 500px;
+    height: 350px;
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+.hovertext {
+    position: relative;
+    border-bottom: 1px dotted black;
+  }
+  
+  .hovertext:before {
+    content: attr(data-hover);
+    visibility: hidden;
+    opacity: 0;
+    width: 140px;
+    background-color: rgb(253, 197, 197);
+    color: #000000;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    transition: opacity .5s ease-in-out;
+  
+    position: absolute;
+    z-index: 1;
+    left: 10px;
+    top: 86%;
+  }
+  
+  .hovertext:hover:before {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /*Contact Form*/
+  .masterDIV {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    padding-top: 15px;
+    color: rgb(49, 243, 72)
+    
+}
+.main-div {
+    align-items: center;
+    flex-direction: column;
+    border: solid rgb(253, 197, 197);
+    max-width: 100%;
+    padding: 20px;
+}
+.divName {
+    max-width: 100%;
+    padding: 10px;
+    padding-left: 31px;
+}
+.divEmail {
+    max-width: 100%;
+    padding: 10px;
+    padding-left: 31px;
+}
+.divMessage {
+    max-width: 100%;
+    padding: 10px;
+    display: flex
+}
+.divSubmit {
+    max-width: 100%;
+    padding: 10px;
+    padding-left: 79px;
+}
